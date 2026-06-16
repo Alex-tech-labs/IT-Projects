@@ -1,4 +1,4 @@
-# Active Directory Fundamentals Lab - Detailed Notes Objective
+# Active Directory Fundamentals Lab Walk-through
 
 Built a Windows Server 2025 Active Directory environment with a Windows 11 client workstation using VirtualBox.
 
