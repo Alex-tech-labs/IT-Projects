@@ -103,29 +103,34 @@ Assigned users to appropriate security groups.
 
 ![WIN-CLIENT DNS Configuration](Screenshots/06_Client_DNS_Config.png)
 
-## Troubleshooting Highlights
+## Troubleshooting Log:
 
-### EFI Boot Issue 
+### EFI Boot Failure
 
-- Virtual machine failed to boot.
-- Resolved by enabling EFI in VirtualBox settings.
+**Issue:** VM would not boot.<br>
+**Resolution:** Enabled EFI in VirtualBox settings.
 
-### Display Controller Issue
+### Black Screen During Installation
 
-- Windows installation displayed a black screen.
-- Resolved by changing the graphics controller from VBoxSVGA to VMSVGA.
+**Issue:** Windows Server displayed a black screen.<br>
+**Resolution:** Changed graphics controller to VMSVGA.
 
-### Server Core Installation
+### Installed Server Core Instead of Desktop Experience
 
-- Initially installed Windows Server Core instead of Desktop Experience.
-- Reinstalled using Windows Server 2025 Standard Evaluation (Desktop Experience).
+**Issue:** Windows Server installed without GUI.<br>
+**Resolution:** Reinstalled using Windows Server 2025 Standard Evaluation (Desktop Experience).
 
-### DNS and Domain Join Troubleshooting
+### DNS Resolution Failure
 
-- Client workstation could not resolve adlab.local.
-- Verified DNS configuration, DNS service status, and Active Directory health.
-- Reconfigured VirtualBox networking and implemented static IP addressing.
-- Successfully restored domain name resolution and completed domain join.
+**Issue:** The Client could reach DC1 by IP address but could not resolve adlab.local as the hostname attached to that IP address.<br>
+**Resolution:** Disabled DHCP, and configured static IP addresses and pointed client DNS to DC1.
+
+## Key Lessons Learned
+
+- Active Directory depends heavily on DNS.
+- Domain joins can fail even when network connectivity appears functional.
+- Windows Server Core and Desktop Experience provide different administration experiences.
+- Virtual machine settings can impact operating system installation and functionality.
 
 ## Skills Demonstrated
 
@@ -138,17 +143,6 @@ Assigned users to appropriate security groups.
 - Network Troubleshooting
 - Domain Deployment
 - Windows Client Management
-
-## Lessons Learned
-
-- Active Directory relies heavily on proper DNS configuration
-- Domain joins can fail even when basic network connectivity is functional
-- Windows Server Core and Desktop Experience provide significantly different administration experiences.
-- Virtual machine display settings can prevent successful operating system installation.
-
-## Screenshots
-
-Additional screenshots documenting VM setup, troubleshooting, and Active Directory Configuration are available in the [Screenshots Directory](Screenshots/).
 
 ## Future Enhancements
 
