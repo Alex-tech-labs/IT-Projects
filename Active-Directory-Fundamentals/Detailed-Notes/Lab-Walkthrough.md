@@ -155,32 +155,13 @@ ADLAB
 2.	Log in as: ADLAB\aalex
 3.	Verify successful domain authentication.
 
-## Troubleshooting Log:
+## This is the conclusion on of this Active Directory lab walkthrough:
 
-### EFI Boot Failure
+### Future Enhancements
 
-- **Issue:** VM would not boot.
-- **Resolution:** Enabled EFI in VirtualBox settings.
-
-### Black Screen During Installation
-
-- **Issue:** Windows Server displayed a black screen.
-- **Resolution:** Changed graphics controller to VMSVGA.
-
-### Installed Server Core Instead of Desktop Experience
-
-- **Issue:** Windows Server installed without GUI.
-- **Resolution:** Reinstalled using Windows Server 2025 Standard Evaluation (Desktop Experience).
-
-### DNS Resolution Failure
-
-- **Issue:** The Client could reach DC1 by IP address but could not resolve adlab.local as the hostname attached to that IP address.
-- **Resolution:** Disabled DHCP, and configured static IP addresses and pointed client DNS to DC1.
-
-## Key Lessons Learned
-
-- Active Directory depends heavily on DNS.
-- Domain joins can fail even when network connectivity appears functional.
-- Windows Server Core and Desktop Experience provide different administration experiences.
-- Virtual machine settings can impact operating system installation and functionality.
+- DHCP Deployment
+- File Shares and NTFS Permissions
+- Advanced Group Policy Configuration
+- Help Desk Ticket Simulation
+- Multi-Client Domain Environment
 
