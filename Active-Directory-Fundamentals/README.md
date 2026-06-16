@@ -125,6 +125,11 @@ Assigned users to appropriate security groups.
 **Issue:** The Client could reach DC1 by IP address but could not resolve adlab.local as the hostname attached to that IP address.<br>
 **Resolution:** Disabled DHCP, and configured static IP addresses and pointed client DNS to DC1.
 
+## For detailed walk-through and troubleshooting notes, see:
+
+- [Lab-Walkthrough.md](Detailed-Notes/Lab-Walkthrough.md)
+- [Common-Issues.md](Troubleshooting/Common-Issues.md)
+
 ## Key Lessons Learned
 
 - Active Directory depends heavily on DNS.
