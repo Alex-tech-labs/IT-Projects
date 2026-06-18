@@ -147,8 +147,6 @@ Remove Groups
 
 Both actions are commonly included in an employee offboarding process.
 
----
-
 ## Conclusion
 
 This lab demonstrated the complete user lifecycle within Microsoft Entra ID:
