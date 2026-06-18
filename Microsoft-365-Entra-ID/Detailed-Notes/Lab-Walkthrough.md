@@ -12,7 +12,6 @@
 2. Review the tenant name, primary domain, and licensing information.
 3. Verify Security Defaults are enabled - default MFA deployed since October 2025.
 
-![Security Default Settings](Screenshots/02_Security_Defaults.png)
 ### Why This Matters
 
 Before making changes, administrators should understand the environment they're working in and verify that baseline security settings are in place.
