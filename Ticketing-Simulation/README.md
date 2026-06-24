@@ -52,9 +52,15 @@ This project simulates common Tier 1 Help Desk support scenarios using the Spice
 
 ### Password Reset Request
 
+#### **Ticket Creation**
+
 ![Password Reset Ticket](Screenshots/Password-Reset/02_PWReset_Ticket_Created.png)
 
+#### **Ticket Workflow**
+
 ![Password Reset Workflow](Screenshots/Password-Reset/03_PWReset_Workflow.png)
+
+#### **Ticket Resolution**
 
 ![Password Reset Resolution](Screenshots/Password-Reset/04_PWReset_Resolution.png)
 
@@ -62,9 +68,15 @@ This project simulates common Tier 1 Help Desk support scenarios using the Spice
 
 ### VPN Connection Failure
 
+#### **Ticket Creation**
+
 ![VPN Ticket](Screenshots/VPN/21_VPN_Connection_Failure.png)
 
+#### **Ticket Workflow**
+
 ![VPN Workflow](Screenshots/VPN/22_VPN_Workflow.png)
+
+#### **Ticket Resolution**
 
 ![VPN Resolution](Screenshots/VPN/23_VPN_Resolution.png)
 
@@ -72,9 +84,15 @@ This project simulates common Tier 1 Help Desk support scenarios using the Spice
 
 ### Outlook Authentication Failure
 
+#### **Ticket Creation**
+
 ![Outlook Ticket](Screenshots/Outlook/31_Outlook_Authen_Failure.png)
 
+#### **Ticket Workflow**
+
 ![Outlook Workflow](Screenshots/Outlook/32_Outlook_Authen_Workflow.png)
+
+#### **Ticket Resolution**
 
 ![Outlook Resolution](Screenshots/Outlook/33_Outlook_Authen_Resolution.png)
 
@@ -82,9 +100,15 @@ This project simulates common Tier 1 Help Desk support scenarios using the Spice
 
 ### Printer Not Printing
 
+#### **Ticket Creation**
+
 ![Printer Ticket](Screenshots/Printer/41_Printer_Ticket_Creation.png)
 
+#### **Ticket Workflow**
+
 ![Printer Workflow](Screenshots/Printer/42_Printer_Workflow.png)
+
+#### **Ticket Resolution**
 
 ![Printer Resolution](Screenshots/Printer/43_Printer_Resolution.png)
 
@@ -92,9 +116,15 @@ This project simulates common Tier 1 Help Desk support scenarios using the Spice
 
 ### MFA Enrollment Failure
 
+#### **Ticket Creation** 
+
 ![MFA Ticket](Screenshots/MFA/51_MFA_Failure.png)
 
+#### **Ticket Workflow**
+
 ![MFA Workflow](Screenshots/MFA/52_MFA_Workflow.png)
+
+#### **Ticket Resolution**
 
 ![MFA Resolution](Screenshots/MFA/53_MFA_Resolution.png)
 
