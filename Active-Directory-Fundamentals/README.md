@@ -33,7 +33,7 @@ This project demonstrates the deployment and administration of a Windows Active 
 ### Client Workstation
 
 - Windows 11
-- Domain Joined Active Directory Fundamentals Lab
+- Domain Joined Client (adlab.local)
 - Static IP: 10.10.10.20
 - DNS Server: 10.10.10.10
 
