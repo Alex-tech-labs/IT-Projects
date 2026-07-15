@@ -91,7 +91,7 @@ The client workstation could successfully ping the domain controller's IP addres
 I performed several tests to isolate the issue:
 
 * Verified network connectivity by pinging the domain controller's IP address (10.10.10.10).
-* Attempted to communicate by pinging the hostname `adlab.local`, the ping failed.
+* Attempted to communicate by pinging the domain name `adlab.local`, the ping failed.
 * Reviewed IP and DNS configuration using `ipconfig /all`.
 * Verified Active Directory Domain Services and DNS services were running on the domain controller.
 
