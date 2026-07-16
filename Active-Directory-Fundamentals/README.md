@@ -122,7 +122,7 @@ Assigned users to appropriate security groups.
 
 ### DNS Resolution Failure
 
-**Issue:** The Client could reach DC1 by IP address but could not resolve adlab.local as the hostname attached to that IP address.<br>
+**Issue:** The Client could reach DC1 by IP address but could not resolve adlab.local as the domain name attached to that IP address.<br>
 **Resolution:** Disabled DHCP, and configured static IP addresses and pointed client DNS to DC1.
 
 ## For a walk-through and detailed troubleshooting notes, see:
