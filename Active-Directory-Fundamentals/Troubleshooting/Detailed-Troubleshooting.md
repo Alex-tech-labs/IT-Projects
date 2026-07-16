@@ -84,42 +84,45 @@ Windows Server installation choices significantly affect the available managemen
 
 ### Problem
 
-The client workstation could successfully ping the domain controller's IP address but could not resolve the domain name `adlab.local`. Because of this, the client could not properly communicate with Active Directory services.
+After promoting the server to a domain controller, the client workstation could not resolve the domain name `adlab.local` and was unable to join or communicate with the Active Directory domain.
 
 ### Investigation
 
 I performed several tests to isolate the issue:
 
-* Verified network connectivity by pinging the domain controller's IP address (10.10.10.10).
-* Attempted to communicate by pinging the domain name `adlab.local`, the ping failed.
-* Reviewed IP and DNS configuration using `ipconfig /all`.
-* Verified Active Directory Domain Services and DNS services were running on the domain controller.
+* Reviewed the virtual network configuration and determined both VMs were initially using the default NAT network.
+* Reconfigured both virtual machines to use the same Internal Network with static IP addresses.
+* Verified basic network connectivity by pinging the domain controller's IP address (`10.10.10.10`).
+* Attempted to communicate by hostname using `ping adlab.local`, which failed.
+* Reviewed the client's IP and DNS configuration using `ipconfig /all`.
+* Used `nslookup adlab.local` to verify the client was querying the domain controller (`10.10.10.10`) for DNS resolution.
+* Confirmed Active Directory Domain Services and DNS were functioning on the domain controller.
 
-**Results showed that communication by IP address succeeded while communication by hostname failed.**
+**The results showed that communication by IP address succeeded, but DNS name resolution initially failed.**
 
 ### Root Cause
 
-The client was not using the domain controller as its DNS server.
+The lab environment required proper network configuration before Active Directory could function correctly.
 
-Although network connectivity existed, DNS name resolution was failing.
+After reconfiguring the virtual network, assigning static IP addresses, and configuring the domain controller as the client's preferred DNS server, DNS name resolution functioned as expected.
 
 ### Resolution
 
-1. Disabled DHCP.
-2. Configured static IP addresses.
-3. Assigned the domain controller as the preferred DNS server.
-4. Verified successful name resolution.
-5. Retested domain communication.
+* Switched both virtual machines from NAT to an Internal Network.
+* Disabled DHCP and assigned static IP addresses.
+* Configured the domain controller (`10.10.10.10`) as the client's preferred DNS server.
+* Verified successful DNS name resolution.
+* Retested domain communication.
 
 ### Result
 
-The client successfully resolved **adlab.local** and was able to join and authenticate against the Active Directory domain.
+The client successfully resolved `adlab.local` and was able to join and authenticate against the Active Directory domain.
 
 ### Lesson Learned
 
 This issue reinforced one of the most important Active Directory concepts:
 
-**Active Directory depends on DNS. If DNS is not functioning correctly, many AD services will fail even when network connectivity appears normal.**
+**Active Directory depends on DNS. If DNS is not functioning correctly, many AD services will fail even when basic network connectivity appears normal.**
 
 ---
 
